@@ -25,8 +25,9 @@
     inputs.hyprwm-contrib.packages.${pkgs.system}.grimblast
     exa
     gnumake
-    gcc
     clang-tools
     lua-language-server
+    spotify
+    nil
   ];
 }

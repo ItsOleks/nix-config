@@ -6,6 +6,10 @@
     settings = {
 
       monitor = ", preferred, auto, 1.25";
+      
+      xwayland = {
+        force_zero_scaling = true;
+      };
 
       exec-once = [
         "~/.config/hypr/start.sh"
@@ -121,8 +125,8 @@
         "SUPER, mouse_up, workspace, e-1"
 
 # Volume controls
-        "SUPER, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-        "SUPER, XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
       ];
 
       bindm = [

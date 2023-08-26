@@ -14,7 +14,7 @@
       vi ~/nix-config/system/
     '')
     (pkgs.writeShellScriptBin "sy" ''
-      nix flake update
+      nix flake update /home/nut/nix-config
     '')
   ];
 }

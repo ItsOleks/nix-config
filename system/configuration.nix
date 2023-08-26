@@ -71,8 +71,6 @@
   # Opengl settings
   hardware.opengl = {
     enable = true;
-    extraPackages = [ pkgs.amdvlk ];
-    
   };
 
   # Enable XDG desktop portal

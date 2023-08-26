@@ -10,11 +10,17 @@
      telegram-desktop
      discord
      htop
-     waybar-hyprland
+     waybar
      killall
      qt6.qtwayland
      qt5.qtwayland
      lm_sensors
      home-manager
   ];
+
+  services.openssh = {
+      enable = true;
+      settings.PasswordAuthentication = false;
+      settings.KbdInteractiveAuthentication = false;
+  };
 }

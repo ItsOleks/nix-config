@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font.package = pkgs.nerdfonts;
-    font.name = "JetBrainsMono";
+    font.name = "MesloLGS NF";
     shellIntegration.enableFishIntegration = true;
     theme = "Tokyo Night";
   };
@@ -11,12 +11,16 @@
     enable = true;
     shellAliases = {
       ls = "exa --long --icons --all";
-      doom = "~/.config/emacs/bin/doom";
     };
+    plugins = [
+      { name = "tide"; src = pkgs.fishPlugins.tide.src; }
+      { name = "z"; src = pkgs.fishPlugins.z.src; }
+      { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
+    ];
   };
 
   programs.starship = {
-    enable = true;
+    enable = false;
     enableFishIntegration = true;
   };
 }

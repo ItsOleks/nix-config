@@ -5,5 +5,6 @@
     withNodeJs = true;
     vimAlias = true;
     viAlias = true;
+    extraPackages = with pkgs; [ gcc ];
   };
 }

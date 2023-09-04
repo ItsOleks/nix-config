@@ -1,14 +1,15 @@
-{ config, myLib, osConfig, ... }:
+{ config, myLib, host, ... }:
 let 
-  host = osConfig.networking.hostName;
+  inherit host;
+
+  monitorScalings = {
+    "agovale" = "1.25";
+    "ector" = "1";
+    "default" = "auto";
+  };
 in {
   wayland.windowManager.hyprland.settings = {
-    monitor = ", preferred, auto, " +
-      myLib.switch host {
-        "agovale" = "1.25";
-        "ector" = "1";
-        "default" = "auto";
-      };
+    monitor = ", preferred, auto, " + myLib.switch host monitorScalings;
 
     xwayland = {
       force_zero_scaling = true;

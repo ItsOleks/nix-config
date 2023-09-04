@@ -1,12 +1,4 @@
-{ pkgs, ... }: {
-  programs.kitty = {
-    enable = true;
-    font.package = pkgs.nerdfonts;
-    font.name = "MesloLGS NF";
-    shellIntegration.enableFishIntegration = true;
-    theme = "Tokyo Night";
-  };
-
+{ config, pkgs, lib, ... }: {
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -17,10 +9,5 @@
       { name = "z"; src = pkgs.fishPlugins.z.src; }
       { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
     ];
-  };
-
-  programs.starship = {
-    enable = false;
-    enableFishIntegration = true;
   };
 }

@@ -1,84 +1,82 @@
-{ inputs, lib, config, pkgs, ... }: {
+{ ... }: {
+  wayland.windowManager.hyprland.settings = {
+    monitor = ", preferred, auto, 1.25";
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    settings = {
+    xwayland = {
+      force_zero_scaling = true;
+    };
 
-      monitor = ", preferred, auto, 1.25";
-      
-      xwayland = {
-        force_zero_scaling = true;
+    exec-once = [
+      "waybar"
+      "dunst"
+      "telegram-desktop"
+      "discord"
+    ];
+
+    input = {
+      kb_layout = "us, ua";
+      kb_options = "grp:win_space_toggle";
+
+      follow_mouse = 1;
+
+      touchpad = {
+        natural_scroll = false;
       };
 
-      exec-once = [
-        "~/.config/hypr/start.sh"
-      ];
+      sensitivity = 0; 
+    };
 
-      input = {
-        kb_layout = "us, ua";
-        kb_options = "grp:win_space_toggle";
+    general = {
+      gaps_in = 2;
+      gaps_out = 5;
+      border_size = 2;
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
 
-        follow_mouse = 1;
+      layout = "dwindle";
+    };
 
-        touchpad = {
-          natural_scroll = false;
-        };
+    decoration = {
+      rounding = 5;
 
-        sensitivity = 0; 
-      };
+      drop_shadow = true;
+      shadow_range = 4;
+      shadow_render_power = 3;
+      "col.shadow" = "rgba(1a1a1aee)";
+    };
 
-      general = {
-        gaps_in = 2;
-        gaps_out = 5;
-        border_size = 2;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+    animations = {
+      enabled = true;
 
-        layout = "dwindle";
-      };
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
-      decoration = {
-        rounding = 5;
-
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
-      };
-
-      animations = {
-        enabled = true;
-
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-
-        animation = [
-          "windows, 1, 7, myBezier"
+      animation = [
+        "windows, 1, 7, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
           "border, 1, 10, default"
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
           "workspaces, 1, 6, default"
-        ];
-      };
-
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-      };
-
-      master = {
-        new_is_master = false;
-      };
-
-      windowrule = [
-        "workspace special:messengers, org.telegram.desktop"
-        "workspace special:messengers, discord"
       ];
-      
-      bind = [
+    };
+
+    dwindle = {
+      pseudotile = true;
+      preserve_split = true;
+    };
+
+    master = {
+      new_is_master = false;
+    };
+
+    windowrule = [
+      "workspace special:messengers, org.telegram.desktop"
+        "workspace special:messengers, discord"
+    ];
+
+    bind = [
 # Basic Binds
-        "SUPER, return, exec, kitty"
+      "SUPER, return, exec, wezterm"
         "SUPER, Q, killactive,"
         "SUPER, M, exit,"
         "SUPER, E, exec, thunar"
@@ -127,13 +125,12 @@
 # Volume controls
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
-      ];
+        ];
 
-      bindm = [
+    bindm = [
 # Move/resize windows with mainMod + LMB/RMB and dragging
-        "SUPER, mouse:272, movewindow"
+      "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
-      ];
-    };
+    ];
   };
 }

@@ -1,6 +1,6 @@
 { ... }: {
   wayland.windowManager.hyprland.settings = {
-    monitor = ", preferred, auto, 1.25";
+    monitor = ", preferred, auto, 1";
 
     xwayland = {
       force_zero_scaling = true;

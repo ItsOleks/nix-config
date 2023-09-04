@@ -4,7 +4,6 @@ let
     ../.
     ../shell
     module_args
-    #inputs.hyprland.homeManagerModules.default
   ];
   
   homeImports = {

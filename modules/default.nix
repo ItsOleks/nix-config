@@ -1,7 +1,7 @@
-{ self, inputs, default, ... }:
+{ self, inputs, myLib, ... }:
 let
   module_args._module.args = {
-    inherit default inputs self;
+    inherit myLib inputs self;
   };
 in {
   imports = [

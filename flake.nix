@@ -46,6 +46,7 @@
         ./home/profiles
         ./hosts
         ./modules
+        ./lib
       ];
     };
 

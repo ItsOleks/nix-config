@@ -1,6 +1,7 @@
 { pkgs, lib, inputs, ... }: {
   imports = [
     ./hyprland
+    ./anyrun.nix
   ];
 
   home.packages = with pkgs; [
@@ -11,7 +12,6 @@
     # utils
     wf-recorder
     wl-clipboard
-    rofi-wayland
     waybar
   ];
 

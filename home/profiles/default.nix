@@ -3,6 +3,7 @@ let
   sharedModules = [
     ../.
     ../shell
+    inputs.anyrun.homeManagerModules.default
     module_args
   ];
   

@@ -5,7 +5,7 @@
       local wezterm = require "wezterm"
 
       return {
-        color_scheme = "Tokyo Night",
+        color_scheme = "Catppuccin Mocha",
         enable_scroll_bar = false,
         enable_tab_bar = false,
         scrollback_lines = 10000,

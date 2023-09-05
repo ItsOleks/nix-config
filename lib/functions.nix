@@ -1,6 +1,7 @@
 { lib, inputs }: {
+  # extremely scuffed bootleg switch statement
   switch = key: attrset:
-    if attrset ? "${key}" then
+    if attrset ? key then
       attrset."${key}"
     else
       attrset.default;
@@ -14,8 +15,7 @@
       "${nameHost}" = inputs.home-manager.lib.homeManagerConfiguration {
         modules = homeImports."${nameHost}";
         extraSpecialArgs = {
-          inherit host;
-          inherit name;
+          inherit host name;
         };
         inherit pkgs;
       };

@@ -4,6 +4,8 @@
     ./games.nix
     ./media.nix
     ./dunst.nix
+    ./gtk.nix
+    ./qt.nix
   ];
 
   programs = {

@@ -7,6 +7,7 @@ let
     "ector" = "1";
     "default" = "auto";
   };
+  pointer = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
     monitor = ", preferred, auto, " + myLib.switch host monitorScalings;
@@ -20,6 +21,7 @@ in {
       "dunst"
       "telegram-desktop"
       "discord"
+      "hyprctl secursor ${pointer.name} ${toString pointer.size}"
     ];
 
     input = {
@@ -88,9 +90,8 @@ in {
       "SUPER, return, exec, wezterm"
       "SUPER, Q, killactive,"
       "SUPER, M, exit,"
-      "SUPER, E, exec, thunar"
       "SUPER, V, togglefloating, "
-      "SUPER, R, exec, rofi -show drun -show-icons"
+      "SUPER, R, exec, anyrun"
       "SUPER, P, pseudo,"
       "SUPER, J, togglesplit,"
       "SUPER SHIFT, S, exec, grimblast copy area"

@@ -1,11 +1,8 @@
 { config, myLib, host, ... }:
 let 
-  inherit host;
-
   monitorScalings = {
     "agovale" = "1.25";
     "ector" = "1";
-    "default" = "auto";
   };
   pointer = config.home.pointerCursor;
 in {

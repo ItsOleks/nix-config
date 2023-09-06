@@ -1,27 +1,29 @@
 { inputs, withSystem, module_args, myLib, ... }: 
 let
+  inherit (myLib) mkImports;
+
+  homeImports = 
+    mkImports "nut" "agovale" 
+      ([
+        ../programs
+        ../shell
+        ../terminals/wezterm.nix
+        ../wm
+      ] ++ sharedModules) //
+    mkImports "nut" "ector"
+      ([
+        ../programs
+        ../shell
+        ../terminals/wezterm.nix
+        ../wm
+      ] ++ sharedModules);
+
   sharedModules = [
     ../.
     ../shell
     inputs.anyrun.homeManagerModules.default
     module_args
   ];
-  
-  homeImports = {
-      "nut@agovale" = [
-        ../programs
-        ../shell
-        ../terminals/wezterm.nix
-        ../wm
-      ] ++ sharedModules;
-
-      "nut@ector" = [
-        ../programs
-        ../shell
-        ../terminals/wezterm.nix
-        ../wm
-      ] ++ sharedModules;
-  };
 
 in {
   imports = [
@@ -30,11 +32,7 @@ in {
 
   flake = {
     homeConfigurations = withSystem "x86_64-linux" ({pkgs, ...}:
-    let 
-    mkHomeConfig = myLib.mkHomeConfig pkgs homeImports;
-    in
-      mkHomeConfig "nut" "agovale" //
-      mkHomeConfig "nut" "ector"
+      myLib.mkHomeConfigs pkgs homeImports
     );
   };
 }

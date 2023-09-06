@@ -18,6 +18,7 @@ in {
           ./shared.nix
           ./network.nix
           ./nix.nix
+          ./security.nix
         ];
       };
     }

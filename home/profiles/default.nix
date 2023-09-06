@@ -9,6 +9,7 @@ let
         ../shell
         ../terminals/wezterm.nix
         ../wm
+        ../editors/helix
       ] ++ sharedModules) //
     mkImports "nut" "ector"
       ([
@@ -22,6 +23,7 @@ let
     ../.
     ../shell
     inputs.anyrun.homeManagerModules.default
+    inputs.nixvim.homeManagerModules.nixvim
     module_args
   ];
 

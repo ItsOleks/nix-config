@@ -1,4 +1,16 @@
 {
+
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      imports = [
+        ./home/profiles
+        ./hosts
+        ./modules
+        ./lib
+      ];
+    };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -42,18 +54,12 @@
     };
 
     fu.url = "github:numtide/flake-utils";
-  };
 
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" ];
-      imports = [
-        ./home/profiles
-        ./hosts
-        ./modules
-        ./lib
-      ];
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+  };
 
   nixConfig = {
     extra-substituters = [

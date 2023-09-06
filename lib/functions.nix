@@ -17,7 +17,7 @@
         })
       homeImports;
 
-  mkImports = username: host: imports: {
-    "${username}@${host}" = imports ++ [{_module.args = {inherit username host;};}];
+  mkImports = sharedModules: username: host: imports: {
+    "${username}@${host}" = imports ++ sharedModules ++ [{_module.args = {inherit username host;};}];
   };
 } 

@@ -1,23 +1,24 @@
 { inputs, withSystem, module_args, myLib, ... }: 
 let
-  inherit (myLib) mkImports;
+  mkImports = myLib.mkImports sharedModules;
 
   homeImports = 
     mkImports "nut" "agovale" 
-      ([
+      [
         ../programs
         ../shell
         ../terminals/wezterm.nix
         ../wm
         ../editors/helix
-      ] ++ sharedModules) //
+      ] //
     mkImports "nut" "ector"
-      ([
+      [
         ../programs
         ../shell
         ../terminals/wezterm.nix
         ../wm
-      ] ++ sharedModules);
+        ../editors/helix
+      ];
 
   sharedModules = [
     ../.

@@ -4,6 +4,7 @@
     packages = with pkgs; [
       # icon fonts
       material-symbols
+      font-awesome
 
       # normal fonts
       lexend

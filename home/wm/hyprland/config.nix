@@ -129,6 +129,9 @@ in {
       "SUPER, mouse_down, workspace, e+1"
       "SUPER, mouse_up, workspace, e-1"
 
+    ];
+
+    bindl = [
 # Volume controls
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"

@@ -20,5 +20,7 @@
     xdg-utils
 
     obsidian
+    xfce.thunar
+    xarchiver
   ];
 }

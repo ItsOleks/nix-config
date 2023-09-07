@@ -2,6 +2,7 @@
   imports = [
     ./hyprland
     ./anyrun.nix
+    ./eww.nix
   ];
 
   home.packages = with pkgs; [
@@ -12,7 +13,6 @@
     # utils
     wf-recorder
     wl-clipboard
-    waybar
   ];
 
   home.sessionVariables = {

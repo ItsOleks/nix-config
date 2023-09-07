@@ -8,7 +8,7 @@
         ./agovale
         ../modules/desktop.nix
         ../modules/greetd.nix
-        #{home-manager.users.nut.imports = homeImports."nut@agovale";}
+        {home-manager.users.nut.imports = homeImports."nut@agovale";}
       ] ++ sharedModules;
     };
 
@@ -17,7 +17,7 @@
         ./ector
         ../modules/desktop.nix
         ../modules/gdm.nix
-        #{home-manager.users.nut.imports = homeImports."nut@ector";}
+        {home-manager.users.nut.imports = homeImports."nut@ector";}
       ] ++ sharedModules;
     };
   };

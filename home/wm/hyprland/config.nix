@@ -14,11 +14,12 @@ in {
     };
 
     exec-once = [
-      "waybar"
       "dunst"
       "telegram-desktop"
       "discord"
       "hyprctl secursor ${pointer.name} ${toString pointer.size}"
+      "eww daemon"
+      "eww open bar"
     ];
 
     input = {

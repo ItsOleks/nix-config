@@ -2,7 +2,7 @@
   imports = [
     ./hyprland
     ./anyrun.nix
-    ./waybar.nix
+    ./waybar
   ];
 
   home.packages = with pkgs; [

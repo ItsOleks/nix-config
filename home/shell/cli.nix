@@ -7,6 +7,7 @@
     # utils
     fd
     ripgrep
+    killall
 
     # file manager
     ranger

@@ -18,7 +18,7 @@ in {
       "telegram-desktop"
       "discord"
       "hyprctl secursor ${pointer.name} ${toString pointer.size}"
-      "waybar"
+      "waybar-update.sh"
     ];
 
     input = {

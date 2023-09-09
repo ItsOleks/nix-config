@@ -3,7 +3,6 @@
   fonts = {
     packages = with pkgs; [
       # icon fonts
-      material-symbols
       font-awesome
 
       # normal fonts
@@ -15,6 +14,7 @@
 
       #nerd fonts
       nerdfonts
+      emacs-all-the-icons-fonts
     ];
 
     enableDefaultPackages = false;
@@ -35,17 +35,6 @@
     };
   };
 
-  nix = {
-    settings = {
-      substituters = [
-        "https://hyprland.cachix.org"
-      ];
-      trusted-public-keys = [
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      ];
-    };
-  };
-
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   services.pipewire = {
@@ -54,11 +43,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
-  };
-
-  security = {
-    pam.services.gtklock.text = "auth include login";
-    rtkit.enable = true;
   };
 
   xdg.portal = {

@@ -22,5 +22,6 @@
     obsidian
     xfce.thunar
     xarchiver
+
   ];
 }

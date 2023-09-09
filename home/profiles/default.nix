@@ -25,7 +25,6 @@ let
     ../shell
     inputs.anyrun.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.fufexan.homeManagerModules.eww-hyprland
     module_args
   ];
 

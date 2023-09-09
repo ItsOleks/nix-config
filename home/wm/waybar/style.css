@@ -8,9 +8,10 @@
 
 window#waybar {
     color: @text;
-    background: @base;
+    background: transparent;
     transition-property: background-color;
     transition-duration: .5s;
+
 }
 
 window#waybar.hidden {
@@ -52,7 +53,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @text;
 }
 
 #workspaces button:hover {

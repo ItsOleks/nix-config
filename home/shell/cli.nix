@@ -8,6 +8,7 @@
     fd
     ripgrep
     killall
+    inotify-tools
 
     # file manager
     ranger

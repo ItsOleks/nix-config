@@ -7,6 +7,7 @@
       modules = [
         ./agovale
         ../modules/desktop.nix
+        ../modules/docker.nix
         ../modules/greetd.nix
         {home-manager.users.nut.imports = homeImports."nut@agovale";}
       ] ++ sharedModules;
@@ -16,6 +17,7 @@
       modules = [
         ./ector
         ../modules/desktop.nix
+        ../modules/docker.nix
         ../modules/gdm.nix
         {home-manager.users.nut.imports = homeImports."nut@ector";}
       ] ++ sharedModules;

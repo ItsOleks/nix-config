@@ -22,8 +22,8 @@
     fontconfig.defaultFonts = {
       serif = ["Roboto Serif" "Noto Color Emoji"];
       sansSerif = ["Roboto" "Noto Color Emoji"];
-      monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
-      emoji = ["Noto Color Emoji"];
+      monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji" "FontAwesome"];
+      emoji = ["Noto Color Emoji" "FontAwesome"];
     };
   };
   # use Wayland where possible (electron)

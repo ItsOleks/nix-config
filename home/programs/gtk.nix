@@ -23,10 +23,8 @@
     };
 
     theme = {
-      name = "Catppuccin-Mocha-Standard-Blue-dark";
-      package = pkgs.catppuccin-gtk.override {
-        variant = "mocha";
-      };
+      name = "gruvbox-dark";
+      package = pkgs.gruvbox-dark-gtk;
     };
   };
 }

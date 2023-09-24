@@ -9,7 +9,7 @@ let
         ../shell
         ../terminals/wezterm.nix
         ../wm
-        ../editors/helix
+        ../editors/emacs
       ] //
     mkImports "nut" "ector"
       [
@@ -17,7 +17,6 @@ let
         ../shell
         ../terminals/wezterm.nix
         ../wm
-        ../editors/helix
       ];
 
   sharedModules = [

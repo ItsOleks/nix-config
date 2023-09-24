@@ -50,6 +50,13 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
+#workspaces {
+    padding: 0 5px;
+    margin-right: 0px;
+    border-radius: 20px;
+    opacity: 0.88;
+}
+
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -60,7 +67,7 @@ button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
 }
@@ -253,7 +260,6 @@ label:focus {
     background: #00b093;
     color: #740864;
     padding: 0 5px;
-    margin: 0 5px;
     min-width: 16px;
 }
 

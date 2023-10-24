@@ -1,4 +1,4 @@
-{ pkgs, self, inputs, ... }: {
+{ pkgs, self, inputs, config, ... }: {
   # TODO separate out the laptop only stuff
   fonts = {
     packages = with pkgs; [
@@ -26,6 +26,7 @@
       emoji = ["Noto Color Emoji" "FontAwesome"];
     };
   };
+
   # use Wayland where possible (electron)
   environment.variables.NIXOS_OZONE_WL = "1";
 
@@ -51,4 +52,9 @@
       pkgs.xdg-desktop-portal-gtk 
     ];
   };
+
+  #for obs virtual camera
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
 }

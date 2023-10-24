@@ -28,7 +28,7 @@ let
       "hyprland/language"
       "network"
       "bluetooth"
-      "pulseaudio#microphone"
+      "pulseaudio"
       "custom/battery"
       "clock"
       "tray"

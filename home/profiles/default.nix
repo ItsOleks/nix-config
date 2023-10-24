@@ -10,6 +10,7 @@ let
         ../terminals/wezterm.nix
         ../wm
         ../editors/emacs
+	../programs/godot
       ] //
     mkImports "nut" "ector"
       [

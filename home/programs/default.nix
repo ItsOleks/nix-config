@@ -25,5 +25,6 @@
     xfce.thunar
     xarchiver
 
+    distrobox
   ];
 }

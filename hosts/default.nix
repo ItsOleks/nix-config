@@ -19,6 +19,7 @@
         ../modules/desktop.nix
         ../modules/docker.nix
         ../modules/gdm.nix
+	../modules/nvidia.nix
         {home-manager.users.nut.imports = homeImports."nut@ector";}
       ] ++ sharedModules;
     };

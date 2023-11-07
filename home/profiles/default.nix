@@ -6,7 +6,6 @@ let
     mkImports "nut" "agovale" 
       [
         ../programs
-        ../shell
         ../terminals/wezterm.nix
         ../wm
         ../editors/emacs
@@ -15,7 +14,6 @@ let
     mkImports "nut" "ector"
       [
         ../programs
-        ../shell
         ../terminals/wezterm.nix
         ../wm
       ];

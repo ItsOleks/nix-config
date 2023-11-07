@@ -18,6 +18,9 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    config.permittedInsecurePackages = [
+      "electron-11.5.0"
+    ];
     overlays = [
       inputs.emacs-overlay.overlay
     ];

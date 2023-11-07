@@ -29,7 +29,7 @@ let
       "network"
       "bluetooth"
       "pulseaudio"
-      "custom/battery"
+      "battery"
       "clock"
       "tray"
     ];
@@ -81,10 +81,16 @@ let
       interval = 10;
     };
 
-    "custom/battery" = {
-      exec = "$SCRIPTS/os/battery.sh";
-      format = " 󰁹 {}";
-      interval = 10;
+    battery = {
+      states = {
+	warning = 30;
+        critical = 15;
+      };
+      format = "{capacity}% {icon}";
+      format-charging = "{capacity}% ";
+      format-plugged = "{capacity}% ";
+      format-alt = "{time} {icon}";
+      format-icons = ["" "" "" "" ""];
     };
 
     "custom/gpu-usage" = {
@@ -229,6 +235,7 @@ let
     #network,
     #bluetooth,
     #pulseaudio,
+    #battery,
     #custom-wallchange,
     #custom-mode,
     #tray {
@@ -237,10 +244,6 @@ let
         opacity: 1;
         padding: 0px;
         margin: 3px 3px 3px 3px;
-    }
-
-    #custom-battery {
-        color: @green_1
     }
 
     /* resource monitor block */
@@ -260,6 +263,10 @@ let
         margin-right: 6px;
     }
 
+    #battery {
+    	padding-right: 6px;
+	color: @green;
+    }
 
     /* date time block */
     #clock {

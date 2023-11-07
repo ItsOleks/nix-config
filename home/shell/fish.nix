@@ -3,6 +3,7 @@
     enable = true;
     shellAliases = {
       ls = "exa --long --icons --all";
+      oly = "distrobox enter archlinux -- /home/arch/linux.main/olympus";
     };
     plugins = [
       { name = "tide"; src = pkgs.fishPlugins.tide.src; }

@@ -5,6 +5,7 @@
     jaq
     xorg.xprop
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    brightnessctl
   ];
 
   wayland.windowManager.hyprland.enable = true;

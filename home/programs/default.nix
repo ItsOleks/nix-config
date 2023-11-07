@@ -15,9 +15,8 @@
   home.packages = with pkgs; [
     telegram-desktop
     discord
-    revolt-desktop
-    webcord
-
+    vesktop
+    
     libnotify
     xdg-utils
 

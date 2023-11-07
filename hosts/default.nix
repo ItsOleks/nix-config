@@ -20,6 +20,7 @@
         ../modules/docker.nix
         ../modules/gdm.nix
 	../modules/nvidia.nix
+	../modules/bluetooth.nix
         {home-manager.users.nut.imports = homeImports."nut@ector";}
       ] ++ sharedModules;
     };

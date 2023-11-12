@@ -4,10 +4,10 @@
     config = {
       plugins = with inputs.anyrun.packages.${pkgs.system}; [
         applications
-        shell
-        websearch
-        translate
-        symbols
+	symbols
+	rink
+	shell
+	websearch
       ];
       width.fraction = 0.3;
       y.fraction = 0.05;

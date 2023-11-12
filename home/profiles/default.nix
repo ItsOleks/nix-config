@@ -15,6 +15,7 @@ let
       [
         ../programs
         ../terminals/wezterm.nix
+	../programs/latex.nix
         ../wm
       ];
 

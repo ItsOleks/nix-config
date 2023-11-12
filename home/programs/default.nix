@@ -21,6 +21,7 @@
     xdg-utils
 
     obsidian
+    libsForQt5.okular
     xfce.thunar
     xarchiver
 

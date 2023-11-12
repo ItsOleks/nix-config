@@ -13,6 +13,8 @@
 
       keep-derivations = true;
       keep-outputs = true;
+
+      builders-use-substituters = true;
     };
   };
 

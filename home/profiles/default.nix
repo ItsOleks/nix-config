@@ -8,8 +8,9 @@ let
         ../programs
         ../terminals/wezterm.nix
         ../wm
-        ../editors/emacs
+        ../editors/neovim
 	../programs/godot.nix
+	../programs/latex.nix
       ] //
     mkImports "nut" "ector"
       [

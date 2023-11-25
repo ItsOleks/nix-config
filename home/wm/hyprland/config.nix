@@ -16,7 +16,7 @@ in {
     exec-once = [
       "dunst"
       "telegram-desktop"
-      "discord"
+      "vencorddesktop"
       "hyprctl secursor ${pointer.name} ${toString pointer.size}"
       "waybar"
       "emacs --daemon"

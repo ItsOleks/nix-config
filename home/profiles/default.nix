@@ -15,7 +15,7 @@ let
     mkImports "nut" "ector"
       [
         ../programs
-        ../terminals/wezterm.nix
+        ../terminals/kitty.nix
 	../programs/latex.nix
         ../editors/nvim
         ../wm

@@ -144,14 +144,14 @@ let
       format = "{icon}  {volume}%";
       format-icons = {
         car = " ";
-        default = [ "" "" "" ];
+        default = [ "󰕿" "󰖀" "󰕾" ];
         hands-free = " ";
         headphone = " ";
         headset = " ";
         phone = " ";
         portable = " ";
       };
-      format-muted = "婢 {volume}%";
+      format-muted = "󰝟  {volume}%";
       on-click = "pavucontrol -t 3";
       on-click-middle = "pamixer -t";
       on-scroll-down = "pamixer -d 5";

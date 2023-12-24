@@ -3,5 +3,7 @@
     prismlauncher
     itch
     love
+    steam-tui
+    steamPackages.steamcmd
   ];
 }

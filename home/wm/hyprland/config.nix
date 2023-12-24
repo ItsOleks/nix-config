@@ -4,6 +4,10 @@ let
     "agovale" = "1.25";
     "ector" = "1";
   };
+  terminals = {
+    "agovale" = "wezterm";
+    "ector" = "kitty";
+  };
   pointer = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
@@ -85,7 +89,7 @@ in {
 
     bind = [
 # Basic Binds
-      "SUPER, return, exec, wezterm"
+      ("SUPER, return, exec, " + myLib.switch host terminals)
       "SUPER, Q, killactive,"
       "SUPER, M, exit,"
       "SUPER, V, togglefloating, "

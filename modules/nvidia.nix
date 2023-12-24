@@ -1,11 +1,15 @@
-{ pkgs, config, lib, ... }: 
+{ pkgs, config, lib, self, ... }: 
 {
   hardware.nvidia.prime = {
-    sync.enable = true;
-
+    sync.enable = false;
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
     amdgpuBusId = "PCI:6:0:0";
     nvidiaBusId = "PCI:1:0:0";
   };
+
   hardware.opengl = {
     enable = true;
     driSupport = true;

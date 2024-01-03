@@ -6,6 +6,7 @@
 
     # utils
     fd
+    fzf
     ripgrep
     killall
     inotify-tools

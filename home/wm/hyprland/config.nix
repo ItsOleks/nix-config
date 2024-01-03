@@ -96,6 +96,7 @@ in {
       "SUPER, R, exec, anyrun"
       "SUPER, P, pseudo,"
       "SUPER, J, togglesplit,"
+      "SUPER, F, fullscreen,"
       "SUPER SHIFT, S, exec, grimblast copy area"
 
 # Move focus with mainMod + arrow keys

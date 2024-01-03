@@ -5,5 +5,6 @@
     love
     steam-tui
     steamPackages.steamcmd
+    r2modman
   ];
 }

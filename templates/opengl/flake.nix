@@ -1,5 +1,5 @@
 {
-  description = "Flake template for my C homework assignments";
+  description = "opengl funny :D";
 
   outputs = inputs: 
   let 
@@ -11,13 +11,26 @@
       pkgs.mkShell
       {
 	NIX_HARDENING_ENABLE = "";
-        nativeBuildInputs = with pkgs; [
+        nativeBuildInputs = 
+	(with pkgs; [
 	  gcc
 	  gdb
 	  clang-tools
 	  binutils
 	  gnumake
-	];
+	  cmake
+	  
+	  libGL
+	  libGLU
+	]) ++
+	(with pkgs.xorg; [
+	  libX11
+	  libXi
+	  libXrandr
+	  libXext
+	  libXcursor
+	  libXinerama
+	]);
       };
   };
   inputs = {

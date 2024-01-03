@@ -9,5 +9,9 @@
       path = ./itsec;
       description = "Flake template for my itsec homework assignments";
     };
+    opengl = {
+      path = ./opengl;
+      description = "Flake template for my opengl experiments";
+    };
   };
 }

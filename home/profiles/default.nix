@@ -6,11 +6,12 @@ let
     mkImports "nut" "agovale" 
       [
         ../programs
-        ../terminals/wezterm.nix
+        ../terminals/kitty.nix
         ../wm
         ../editors/neovim
 	../programs/godot.nix
 	../programs/latex.nix
+	../programs/vial.nix
       ] //
     mkImports "nut" "ector"
       [

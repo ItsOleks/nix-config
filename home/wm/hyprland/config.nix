@@ -5,7 +5,7 @@ let
     "ector" = "1";
   };
   terminals = {
-    "agovale" = "wezterm";
+    "agovale" = "kitty";
     "ector" = "kitty";
   };
   pointer = config.home.pointerCursor;

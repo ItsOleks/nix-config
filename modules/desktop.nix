@@ -36,6 +36,10 @@
     };
   };
 
+  services.udev.packages = with pkgs; [
+    vial
+  ];
+
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   services.pipewire = {

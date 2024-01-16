@@ -13,6 +13,9 @@
 
     # file manager
     ranger
+
+    #bluetooth
+    bluetuith
   ];
 
   programs = {
